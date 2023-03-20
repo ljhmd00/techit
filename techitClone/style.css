@@ -1,6 +1,10 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
 body {
+    min-width: 600px;
     margin: 0;
     color: #222222;
+    font-family: "pretendard";
 }
 
 .header {
@@ -79,15 +83,122 @@ button {
 }
 
 .bannerMessage{
+    max-width: 1280px;
     position: absolute;
-    top: 50%;
-    margin-left: 96px;
+    top: 15%;
+    margin-left: 20%;
     font-size: 18px;
-    transform: translateY(-50%);
 }
+
+
+@media(max-width:768px){
+    .bannerMessage{
+        top:7%
+    }
+}
+
 
 .bannerTitle{
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 12px;
+}
+
+.contents{
+    max-width: 1280px;
+    margin: auto;
+    margin-bottom: 12px;
+}
+
+.contentsTitle{
+color: #e67800;
+font-weight: 600;
+}
+
+.contentsDescription{
+    margin-top: 16px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.contentsDetail{
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentsDetail div:nth-child(1){
+    color:#737373;
+}
+
+.contentsGrid{
+    margin: auto;
+    max-width: 1280px;
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 16px;
+    justify-content: center;
+}
+
+@media(min-width:768px){
+    .contentsGrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width:1024px){
+    .contentsGrid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(min-width:1280px){
+    .contentsGrid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.contentsCard{
+    width: 290px;
+}
+
+.contentsCardImg{
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.contentsCardImg img{
+    display: block;
+    width: 290px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.contentsCardImg img:hover{
+    transform: scale(1.1);
+}
+
+.contentsCardComplete{
+    margin-top: 8px;
+    border: 1px solid #059669;
+    width: 90px;
+    text-align: center;
+    padding: 6px 2px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #059669;
+}   
+
+.contentsCardTitle{
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contentsCardDescription{
+    margin-top: 8px;
+    font-size: 18px;
 }
