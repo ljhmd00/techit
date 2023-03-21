@@ -1,0 +1,19 @@
+@import "responsive";
+
+body {
+    h1 {
+        background-color: lightpink;
+
+        @include responsive("tablet") {
+            background-color: lightcoral;
+        }
+
+        @include responsive("laptop") {
+            background-color: lightseagreen;
+        }
+
+        @include responsive("pc") {
+            background-color: lightskyblue;
+        }
+    }
+}
