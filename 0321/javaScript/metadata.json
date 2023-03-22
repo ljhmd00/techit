@@ -1,15 +1,19 @@
 {
-    "name": "",
-    "description": "",
+    "name": "kong",
+    "description": "maltese",
     "image": "",
     "attributes": [
         {
             "trait_type": "BACKGROUND",
-            "value": "Aquamarien"
+            "value": "Black"
         },
         {
-            "trait_type": "EARRING",
-            "value": "Silver Hoop"
+            "trait_type": "BOX",
+            "value": "#ffc30e"
+        },
+        {
+            "trait_type": "PICTURE",
+            "value": "DALKONG"
         }
     ]
 }
