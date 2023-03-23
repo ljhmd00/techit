@@ -12,8 +12,6 @@ body main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  -webkit-text-stroke: 1px white;
-  color: transparent;
 }
 body main .time {
   border-bottom: 2px solid white;
@@ -21,9 +19,37 @@ body main .time {
   border-bottom-right-radius: 10px;
   font-size: 100px;
   font-weight: bold;
+  -webkit-text-stroke: 2px white;
+  color: transparent;
 }
 body main .time:hover {
-  color: rgb(240, 215, 215);
+  color: rgb(247, 205, 152);
+}
+body main .quotes {
+  position: relative;
+  font-size: 60px;
+}
+body main .quotes .quotesMsg {
+  color: white;
+}
+body main .quotes .quotesAddBtn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  background-color: lightcoral;
+  width: 100%;
+  border: 1px solid lightcoral;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+body main .quotes:hover .quotesAddBtn {
+  display: inline-block;
+}
+body main .newQuotes {
+  display: none;
 }
 body .bgVideo {
   position: fixed;

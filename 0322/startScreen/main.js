@@ -18,3 +18,46 @@ function getTime() {
 // }, 1000);
 
 setInterval(getTime, 1000);
+
+const QUOTES = "quotes";
+
+function getQuotes() {
+    let savedQuotes = localStorage.getItem(QUOTES);
+    const quotesMsg = document.querySelector(".quotesMsg");
+
+    if (!savedQuotes) {
+        localStorage.setItem(QUOTES, JSON.stringify(["블", "체", "스"]));
+
+        savedQuotes = localStorage.getItem(QUOTES);
+    }
+    let quotesArray = JSON.parse(savedQuotes);
+    quotesMsg.innerText = quotesArray[Math.floor(Math.random() * quotesArray.length)];
+}
+
+getQuotes();
+
+function onClickAdd() {
+    const newQuotes = document.querySelector(".newQuotes");
+
+    newQuotes.style.display = "inline-block";
+}
+
+function onClickRegist() {
+    const newQuotes = document.querySelector(".newQuotes");
+    const newQuotesInput = document.querySelector(".newQuotesInput");
+    const quotesMsg = document.querySelector(".quotesMsg");
+
+    if (!newQuotesInput.value) {
+        alert("내용을 입력해주세요");
+        return;
+    }
+
+    let savedQuotes = localStorage.getItem(QUOTES);
+    let quotesArray = JSON.parse(savedQuotes);
+
+    quotesArray.push(newQuotesInput.value);
+    localStorage.setItem(QUOTES, JSON.stringify(quotesArray));
+
+    quotesMsg.innerText = newQuotesInput.value;
+    newQuotes.style.display = "none";
+}
