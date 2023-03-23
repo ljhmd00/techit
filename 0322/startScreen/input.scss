@@ -12,17 +12,16 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: white;
-
+        -webkit-text-stroke: 1px white;
+        color: transparent;
         .time {
-            border: 1px solid white;
-            padding: 3px 14px;
-            border-radius: 10px;
-            font-size: 48px;
+            border-bottom: 2px solid white;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: 100px;
             font-weight: bold;
             &:hover {
-                -webkit-text-stroke: 1px white;
-                color: transparent;
+                color: rgb(240, 215, 215);
             }
         }
     }
