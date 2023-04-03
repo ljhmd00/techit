@@ -1,0 +1,19 @@
+{
+    "name": "kong",
+    "description": "maltese",
+    "image": "",
+    "attributes": [
+        {
+            "trait_type": "BACKGROUND",
+            "value": "Black"
+        },
+        {
+            "trait_type": "BOX",
+            "value": "#ffc30e"
+        },
+        {
+            "trait_type": "PICTURE",
+            "value": "DALKONG"
+        }
+    ]
+}

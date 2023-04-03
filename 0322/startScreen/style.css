@@ -1,0 +1,125 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body {
+  margin: 0;
+  background-color: lightgray;
+  color: rgb(36, 34, 34);
+}
+body .bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+body main {
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .time {
+  border-bottom: 2px solid white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 100px;
+  font-weight: bold;
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+}
+body main .time:hover {
+  color: rgb(247, 205, 152);
+}
+body main .quotes {
+  position: relative;
+  font-size: 60px;
+}
+body main .quotes .quotesMsg {
+  color: white;
+}
+body main .quotes .quotesAddBtn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  background-color: lightcoral;
+  width: 100px;
+  border: 1px solid lightcoral;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+body main .quotes:hover .quotesAddBtn {
+  display: inline-block;
+}
+body main .newQuotes {
+  display: none;
+}
+body main .search .searchLogo {
+  width: 32px;
+  height: 32px;
+  animation: spin 10s linear infinite;
+}
+body main .searchResult {
+  display: none;
+}
+body main .nft {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 24px;
+}
+body main .nft img {
+  width: 256px;
+  height: 256px;
+}
+body main .nft .nftHover {
+  position: absolute;
+  display: none;
+  width: 256px;
+  height: 256px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+body main .nft .nftHover a {
+  color: white;
+}
+body main .nft .nftHover button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: -8px;
+  border-radius: 100px;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  cursor: pointer;
+}
+body main .nft:hover .nftHover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .nftView {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 24px;
+}
+
+/*# sourceMappingURL=style.css.map */
