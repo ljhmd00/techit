@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 function Counter({ count, setCount }) {
     const onClickAdd = () => {
