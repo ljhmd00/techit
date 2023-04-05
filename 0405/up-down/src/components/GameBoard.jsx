@@ -22,7 +22,9 @@ const GameBoard = () => {
             return;
         }
         if (randomNum === checkNum) {
-            setHint("정답입니다!");
+            setHint("정답입니다! 랜덤 값을 초기화 합니다.");
+            setRandomNum(Math.floor(Math.random() * 100));
+            setChoiceNum("");
         } else if (randomNum > checkNum) {
             setHint(`정답은 ${checkNum}보다 높은 숫자입니다.`);
         } else if (randomNum < checkNum) {
