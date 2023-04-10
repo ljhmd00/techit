@@ -62,11 +62,12 @@ function Weather() {
     useEffect(() => {
         getGeolocation();
     }, []);
+
     useEffect(() => {
         if (!lat || !lon) return;
 
         getWeatherInfo();
-    }, [lat, lon]);
+    }, [lat, lon, getWeatherInfo]);
     useEffect(() => console.log(lat), [lat]);
     useEffect(() => console.log(lon), [lon]);
     useEffect(() => console.log(process.env.REACT_APP_WEATHER_API), []);
